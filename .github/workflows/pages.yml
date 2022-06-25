@@ -1,0 +1,29 @@
+name: Check and Deploy
+on: [push]
+
+jobs:
+  check:
+    uses: ./.github/workflows/check.yml
+
+  deploy:
+    name: Deploy to Cloudflare Pages
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile --shamefully-hoist
+      - run: pnpm run generate
+      - name: Deploy Pages
+        run: |
+          pnpm exec wrangler pages publish ./dist \
+            --project-name=${{ secrets.CLOUDFLARE_PAGES_NAME }}
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
