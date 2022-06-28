@@ -6,7 +6,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "typecheck": "nuxt typecheck",
-    "format": "prettier --write --list-different **/*.{js,ts,vue,md,json}"
+    "format": "prettier --list-different **/*.{js,ts,vue,md,json}"
   },
   "devDependencies": {
     "prettier": "^2.7.1",
