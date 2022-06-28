@@ -1,0 +1,11 @@
+# Node.js files
+package.json
+pnpm-lock.yaml
+
+# Nuxt.js files
+.nuxt/
+.output/
+dist/
+
+# Misc
+LICENSE
