@@ -4,6 +4,7 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   modules: ['@nuxt/content', '@nuxtjs/color-mode'],
   content: {
+    sources: ['public'],
     markdown: {
       toc: {
         depth: 5,
