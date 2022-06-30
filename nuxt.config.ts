@@ -10,6 +10,7 @@ export default defineNuxtConfig({
         depth: 5,
         searchDepth: 5,
       },
+      rehypePlugins: ['rehype-mathjax'],
     },
   },
 })
