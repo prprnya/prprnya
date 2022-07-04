@@ -13,4 +13,8 @@ export default defineNuxtConfig({
       rehypePlugins: ['rehype-mathjax'],
     },
   },
+  tailwindcss: {
+    cssPath: '~/assets/tailwind.css',
+    exposeConfig: true,
+  },
 })

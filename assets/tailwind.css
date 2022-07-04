@@ -1,0 +1,16 @@
+body {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+}
+.dark-mode body {
+  background-color: #121212;
+  color: #ebf4f1;
+}
+
+a {
+  color: #39c5bb;
+}
+
+a:hover {
+  text-decoration: none;
+}
