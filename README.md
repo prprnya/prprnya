@@ -1,5 +1,7 @@
 # Hello there 👀
 
-> White Miku in Empty SEKAI
+> My username can be pronounced as _pero-pero-nya_.
 
-You can call me `Van Nya`, or `prprnya`.
+A flattened cat ball that loves to eat 🫐 and play 🎱.
+
+![Flattened cat ball](./flattened-cat-ball.png)
